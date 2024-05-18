@@ -7,13 +7,15 @@ let cli = meow(`
 
   Commands:
     add <library@version>  Add a library to the project
-    remove <library>       Remove a package from the project
+    compile <file>         Compile a Java file
     install                Install all dependencies
+    remove <library>       Remove a package from the project
   
   Options:
-    --verbose, -v          Verbose
     --dev, -d              Add a dev dependency
+    --output, -o           Output directory
     --runtime, -r          Only install runtime dependencies
+    --verbose, -v          Verbose
 
   Examples:
     Add a runtime dependency:
@@ -27,21 +29,28 @@ let cli = meow(`
 
     Install only runtime dependencies
     jeps install --runtime
+
+    Compile a Java file
+    jeps compile src/Main.java
 `, {
   importMeta: import.meta,
   flags: {
-    verbose: {
-      type: "boolean",
-      shortFlag: "v",
-    },
     dev: {
       type: "boolean",
       shortFlag: "d"
     },
+    output: {
+      type: "string",
+      shortFlag: "o",
+    },
     runtime: {
       type: "boolean",
       shortFlag: "r",
-    }
+    },
+    verbose: {
+      type: "boolean",
+      shortFlag: "v",
+    },
   },
 })
 
