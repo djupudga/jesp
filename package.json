@@ -1,0 +1,21 @@
+{
+  "name": "jeps",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "prettier": "prettier --write .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "meow": "^13.2.0",
+    "smol-toml": "^1.1.4",
+    "zx": "^8.0.2"
+  },
+  "devDependencies": {
+    "prettier": "^3.2.5"
+  }
+}
