@@ -54,3 +54,14 @@ rm -rf jesp
     Run project
     jeps run com.package.MainClass
 ```
+
+## Adding a dependency
+
+Use `jeps add <library@version>` to add a dependency. The format is based
+on Maven, meaning it is: `groupId:artifactId@version`.
+
+When adding, the dependencies are pulled from Maven Central and stored in the
+the `deps` folder. A registration is noted in `deps.toml` file.
+
+`jeps add <library@version> --dev/-d` will add a dependency as a development
+time dependency.
