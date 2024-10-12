@@ -24,7 +24,7 @@ let cli = meow(`
     jeps add com.google.guava:guava@31.0.1-jre
 
     Add a development dependency:
-    jeps add com.google.guava:guava@31.0.1-jre --d
+    jeps add com.google.guava:guava@31.0.1-jre -d
 
     Install all dependencies
     jeps install
@@ -36,7 +36,7 @@ let cli = meow(`
     jeps compile src
 
     Run project
-    jeps run com.package.MainClass
+    jeps run yourpackage.MainClass
 `, {
   importMeta: import.meta,
   flags: {
@@ -60,6 +60,11 @@ let cli = meow(`
 })
 
 let [commandName, ...args] = cli.input
+if (!commandName) {
+  console.error("No command specified")
+  cli.showHelp()
+  process.exit(1)
+}
 
 let command = commands[commandName]
 if (!command) {
