@@ -1,10 +1,10 @@
 {
-  "name": "jeps",
+  "name": "jesp",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "bin": {
-    "jeps": "bin/jeps"
+    "jeps": "bin/jesp"
   },
   "type": "module",
   "scripts": {

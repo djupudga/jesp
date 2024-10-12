@@ -3,7 +3,7 @@ import { commands } from "./lib/commands.js"
 
 let cli = meow(`
   Usage:
-    jeps <command> <library@version> [options]
+    jesp <command> <library@version> [options]
 
   Commands:
     add <library@version>  Add a library to the project
@@ -21,22 +21,22 @@ let cli = meow(`
 
   Examples:
     Add a runtime dependency:
-    jeps add com.google.guava:guava@31.0.1-jre
+    jesp add com.google.guava:guava@31.0.1-jre
 
     Add a development dependency:
-    jeps add com.google.guava:guava@31.0.1-jre -d
+    jesp add com.google.guava:guava@31.0.1-jre -d
 
     Install all dependencies
-    jeps install
+    jesp install
 
     Install only runtime dependencies
-    jeps install --runtime
+    jesp install --runtime
 
     Compile project
-    jeps compile src
+    jesp compile src
 
     Run project
-    jeps run yourpackage.MainClass
+    jesp run yourpackage.MainClass
 `, {
   importMeta: import.meta,
   flags: {
