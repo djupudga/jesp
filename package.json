@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "bin": {
-    "jeps": "bin/jesp"
+    "jesp": "bin/jesp"
   },
   "type": "module",
   "scripts": {
